@@ -75,27 +75,27 @@ Download the script.
 ```bash
 crontab -e
 ```
-2. Add this line at the bottom (replace the path to where your script is saved):
-```bash
-0 8 * * * /Users/yourusername/Desktop/mac-cleanup-script/clean_mac.sh >> /Users/yourusername/Desktop/mac-cleanup-script/clean_log.txt 2>&1
-```
-3. To know you mac's name:
+2. To know you mac's name:
 ```bash
   whoami
 ```
+3. Add this line at the bottom (replace the `yourusername` to where your script is saved):
+```bash
+0 8 * * * /Users/yourusername/Desktop/mac-cleanup-script/clean_mac.sh
+```
+
    
 3. Save and exit:
+As default you are using your terminal in Zhs:
+  - Press `esc`
+  - Press `Shift` + `:`
+  - Write `wq` to exit
 
-If your terminal uses nano (default in Bash):
+If your terminal uses Bash:
  - `Ctrl + O` to save
  - `Enter` to confirm
  - `Ctrl + X` to exit
    
-If you're using Vim (often default in Zsh):
-  - Press `esc`
-  - Press `Shift` + `:`
-  - Write `wq` to exit
-    
 
 4. If it worked, you should see this message:
    `crontab: installing new crontab`
@@ -107,6 +107,7 @@ If you're using Vim (often default in Zsh):
   
   - Open the `clean_log.txt` file in your script folder
   - If the script has run, it will write a summary here
+  - If is empty, try to run the script manually
 
 </details>
 
