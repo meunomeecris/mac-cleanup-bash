@@ -1,10 +1,9 @@
-# 💻 Mac Cleanup Using Bash
+# 💻 Mac Cleanup Script
 
 Simple Bash scripts to help macOS users free up disk space automatically.
 
 These scripts were created for anyone who uses heavy apps (like Xcode or Adobe Suite) and often runs out of space.
 
----
 
 ## 🧹 What It Does
 
@@ -23,39 +22,52 @@ These scripts were created for anyone who uses heavy apps (like Xcode or Adobe S
 
 - Automates the cleanup process using `cron` (runs daily at 8 AM)
 
----
 
 
 # 🚀 How to Get Started
 Follow these steps to make the script run every day at 8 AM and keep your Mac clean and light.
 
----
 
-## ✅ Step 1: Allow Full Disk Access
-
+## Step 1: Allow Full Disk Access
+<details>
+<summary> Details (Click to expand) </summary>
+<br>
+  
 To give your `Terminal` permission to access protected folders:
 
-1. Go to `System Settings ` > `Privacy & Security` > `Full Disk Access`
-2. Click the ➕ button and add `Terminal` (or iTerm, if you're using it)
+1. Go to `` > `System Settings ` > `Privacy & Security` > `Full Disk Access`
+2. Click the `+` button and add `Terminal` (or iTerm, if you're using it)
 3. `Restart` your Terminal
 
----
+</details>
 
-## ✅ Step 2: Set Up the Script
 
+## Step 2: Set Up the Script
+
+<details>
+<summary> Details (Click to expand) </summary>
+<br>
+  
 1. Download or clone this repository.
+   - [Download Files](https://drive.google.com/drive/folders/1jfAIF0ZACpmObdtEb8p_frgR9k4AFeN_?usp=sharing)
    - Make sure you have both files: `clean_mac.sh` and `clean_log.txt`
 
-2. Open the Terminal:
+3. Open the Terminal:
    - Press `⌘ + Space` and type `Terminal`
 
-3. Make the script executable adding this line:
+4. Make the script executable adding this line:
 ```bash
 chmod +x clean_mac.sh
 ```
 
-## ✅ Step 3: Schedule It with cron
+</details>
 
+## Step 3: Schedule It with cron
+
+<details>
+<summary> Details (Click to expand) </summary>
+<br>
+  
 1. In `Terminal`, open your crontab:
 ```bash
 crontab -e
@@ -69,13 +81,46 @@ crontab -e
 0 8 * * * /Users/yourusername/mac-cleanup-bash/clean_mac.sh >> /Users/yourusername/mac-cleanup-bash/clean_log.txt 2>&1
 ```
 4. Save and exit:
-  - `Ctrl + O` to save
-  - `Enter`to confirm
-  - `Ctrl + X` to exit
+
+Using terminal shell Bash
+ - `Ctrl + O` to save
+ - `Enter` to confirm
+ - `Ctrl + X` to exit
+   
+Using the default terminal shell Zsh
+  - Press `Shift` + `:`
+  - Write `wq` to exit
+
+</details>
+
+## Step 4: How to Make Sure It's Working
+
+<details>
+<summary> Details (Click to expand) </summary>
+<br>
+  
+  - Check the clean_log.txt file
+  - After the script runs, it writes a summary to this log file.
+
+</details>
+
+## Extra: Run the script Manually
+
+<details>
+<summary> Details (Click to expand) </summary>
+<br>
+  
+1. Open the Terminal
+2. Run the line
+```bash
+  ./clean_mac.sh
+```
+3. Then check your `clean_log.txt.` file
+
+</details>
+
 
 ___
-
-## It's done. 
 
 📌 Use With Caution
 
