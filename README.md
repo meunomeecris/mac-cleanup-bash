@@ -134,9 +134,11 @@ ___
 
 These scripts delete files. No sudo is required, and they’re designed to remove only safe, temporary data, but always make sure you understand what’s being deleted.
 
+
 ❤️ Why This Exists
 
 I built this because I was constantly running out of space while developing iOS apps. Instead of cleaning everything manually, I learned a bit of Bash and wrote this script to automate the job. I hope it helps you too!
+
 
 📬 Contact & support 
 Have a question or need help?

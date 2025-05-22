@@ -1,16 +1,20 @@
 #!/bin/bash
 
-echo "🧹 Starting macOS cleanup... $(date)"
+USER_HOME=$(eval echo ~$USER)
+LOG_FILE="$USER_HOME/Desktop/mac-cleanup-script/clean_log.txt"
 
-# Delete Xcode DerivedData
-rm -rf ~/Library/Developer/Xcode/DerivedData/*
+echo "🧹 Starting mac cleanup script..."
+echo
+echo "📆 Data: $(date)"
+
+echo "🧹 Starting mac cleanup script... $(date)" >> "$LOG_FILE"
 
 # Delete system caches (safe ones)
-rm -rf ~/Library/Caches/*
-rm -rf ~/Library/Logs/*
-rm -rf ~/Library/Cookies/*
-rm -rf ~/Library/Application\ Support/CrashReporter/*
+rm -rf USER_HOME=$/Library/Caches/*
+rm -rf USER_HOME=$/Library/Logs/*
+rm -rf USER_HOME=$/Library/Cookies/*
+rm -rf USER_HOME=$/Library/Application\ Support/CrashReporter/*
 
-osascript -e 'display notification "Cleanup complete!" with title "Mac Cleaner"'
-
+echo
 echo "✅ Cleanup complete."
+echo
