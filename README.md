@@ -75,15 +75,15 @@ Download the script.
 ```bash
 crontab -e
 ```
-2. To know you mac's name:
+2. To find your macOS username (needed in the next step), type:
 ```bash
   whoami
 ```
-3. Add this line at the bottom (replace the `yourusername` to where your script is saved):
+3.Add this line at the bottom of the file. Replace `yourusername with the username you found in the previous step:
 ```bash
 0 8 * * * /Users/yourusername/Desktop/mac-cleanup-script/clean_mac.sh
 ```
-
+This schedules the script to run every day at 8 AM and saves the output to a log file.
    
 3. Save and exit:
 As default you are using your terminal in Zhs:
