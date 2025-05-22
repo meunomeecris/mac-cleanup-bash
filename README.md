@@ -25,9 +25,9 @@ These scripts were created for anyone who uses heavy apps (like Xcode or Adobe S
 
 
 # 🚀 How to Get Started
-Follow these steps to make the script run every day at 8 AM and keep your Mac clean and light.
-
 `These instructions were made for people who are not familiar with Bash or scripting.`
+
+Follow these steps to make the script run every day at 8 AM and keep your Mac clean and light.
 
 ## Step 1: Allow Full Disk Access
 
@@ -46,9 +46,9 @@ To allow the `Terminal` to access protected folders:
 <details> <summary>Click here for instructions</summary> <br>
   
 Download the script.
-  - Create a folder on your Desktop called `mac-cleanup-script`
-  - [Download all the files](https://drive.google.com/drive/folders/1jfAIF0ZACpmObdtEb8p_frgR9k4AFeN_?usp=sharing)
-  - Move the files into the `mac-cleanup-script` folder
+  - [Download the folder `mac-cleanup-script`](https://drive.google.com/drive/folders/1jfAIF0ZACpmObdtEb8p_frgR9k4AFeN_?usp=sharing)
+  - Unwrap the folder
+  - Mmove the dowloaded folder `mac-cleanup-script` to `Desktop`
     
 </details>
 
@@ -70,30 +70,35 @@ Download the script.
 
 ## Step 4: Schedule It with cron
 <details> <summary>Click here for instructions</summary> <br>
-  
-1. In `Terminal`, open your crontab:
-```bash
-crontab -e
-```
-2. To find your macOS username (needed in the next step), type:
-```bash
-  whoami
-```
-3. Add this line at the bottom of the file. Replace `yourusername with the username you found in the previous step:
-This schedules the script to run every day at 8 AM and saves the output to a log file.
 
+1. Find and copy your macOS username (needed in the next step), type:
+```bash
+whoami
+```
+2. Replace `yourusername` with the username you found in the previous step:
 ```bash
 0 9 * * * /Users/yourusername/Desktop/mac-cleanup-script/clean_mac.sh
 ```
-4. To change the time repache the number `9`in the previous step
-   
+3. In `Terminal`, open your crontab:
+```bash
+crontab -e
+```
+4. Add the line at the bottom of the file with your macOS username you found in the previous step:
+```bash
+0 9 * * * /Users/yourusername/Desktop/mac-cleanup-script/clean_mac.sh
+```
+
+5. To change the time:
+
+This schedules the script to run every day at 9 AM and saves the output to a log file.
+
+- For change the time reclaple the `9` on the previous step.
 
    
 3. Save and exit:
 As default you are using your terminal in Zhs:
   - Press `esc`
-  - Press `Shift` + `:`
-  - Write `wq` to exit
+  - Write `:wq` to exit
 
 If your terminal uses Bash:
  - `Ctrl + O` to save
@@ -111,7 +116,7 @@ If your terminal uses Bash:
   
   - Open the `clean_log.txt` file in your script folder
   - If the script has run, it will write a summary here
-  - If is empty, try to run the script manually
+  - If is empty, try to run the script manually (next step)
 
 </details>
 
