@@ -79,6 +79,10 @@ crontab -e
 ```bash
 0 8 * * * /Users/yourusername/Desktop/mac-cleanup-script/clean_mac.sh >> /Users/yourusername/Desktop/mac-cleanup-script/clean_log.txt 2>&1
 ```
+3. To know you mac's name:
+```bash
+  whoami
+```
    
 3. Save and exit:
 
@@ -88,7 +92,7 @@ If your terminal uses nano (default in Bash):
  - `Ctrl + X` to exit
    
 If you're using Vim (often default in Zsh):
-  - Press `ESQ`
+  - Press `esc`
   - Press `Shift` + `:`
   - Write `wq` to exit
     
