@@ -79,11 +79,15 @@ crontab -e
 ```bash
   whoami
 ```
-3.Add this line at the bottom of the file. Replace `yourusername with the username you found in the previous step:
-```bash
-0 8 * * * /Users/yourusername/Desktop/mac-cleanup-script/clean_mac.sh
-```
+3. Add this line at the bottom of the file. Replace `yourusername with the username you found in the previous step:
 This schedules the script to run every day at 8 AM and saves the output to a log file.
+
+```bash
+0 9 * * * /Users/yourusername/Desktop/mac-cleanup-script/clean_mac.sh
+```
+4. To change the time repache the number `9`in the previous step
+   
+
    
 3. Save and exit:
 As default you are using your terminal in Zhs:
