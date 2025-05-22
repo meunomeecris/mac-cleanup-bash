@@ -27,13 +27,13 @@ These scripts were created for anyone who uses heavy apps (like Xcode or Adobe S
 # 🚀 How to Get Started
 Follow these steps to make the script run every day at 8 AM and keep your Mac clean and light.
 
+`These instructions were made for people who are not familiar with Bash or scripting.
 
 ## Step 1: Allow Full Disk Access
-<details>
-<summary> Details (Click to expand) </summary>
-<br>
+
+<details> <summary>Click here for instructions</summary> <br>
   
-To give your `Terminal` permission to access protected folders:
+To allow the `Terminal` to access protected folders:
 
 1. Go to `` > `System Settings ` > `Privacy & Security` > `Full Disk Access`
 2. Click the `+` button and add `Terminal` (or iTerm, if you're using it)
@@ -42,31 +42,35 @@ To give your `Terminal` permission to access protected folders:
 </details>
 
 
-## Step 2: Set Up the Script
+## Step 2: Download the script 
 
-<details>
-<summary> Details (Click to expand) </summary>
-<br>
+<details> <summary>Click here for instructions</summary> <br>
   
-1. Download or clone this repository.
-   - [Download Files](https://drive.google.com/drive/folders/1jfAIF0ZACpmObdtEb8p_frgR9k4AFeN_?usp=sharing)
-   - Make sure you have both files: `clean_mac.sh` and `clean_log.txt`
+Download the script.
+  - Create a folder on your Desktop called `mac-cleanup-script`
+  - [Download all the files](https://drive.google.com/drive/folders/1jfAIF0ZACpmObdtEb8p_frgR9k4AFeN_?usp=sharing)
+  - Move the files into the `mac-cleanup-script` folder
+    
+</details>
 
-3. Open the Terminal:
+## Step 3: Access the Folder in Terminal
+<details> <summary>Click here for instructions</summary> <br>
+
+1. Open the Terminal:
    - Press `⌘ + Space` and type `Terminal`
-
-4. Make the script executable adding this line:
-```bash
-chmod +x clean_mac.sh
-```
+2. Access your folder using:
+   ```bash
+   cd ~/Desktop/mac-cleanup-script
+   ```
+3. Make the script executable:
+  ```bash
+  chmod +x clean_mac.sh
+  ```
 
 </details>
 
-## Step 3: Schedule It with cron
-
-<details>
-<summary> Details (Click to expand) </summary>
-<br>
+## Step 4: Schedule It with cron
+<details> <summary>Click here for instructions</summary> <br>
   
 1. In `Terminal`, open your crontab:
 ```bash
@@ -74,55 +78,55 @@ crontab -e
 ```
 2. Add this line at the bottom (replace the path to where your script is saved):
 ```bash
-0 8 * * * /path/to/your/scripts/clean_mac.sh >> /path/to/your/scripts/clean_log.txt 2>&1
+0 8 * * * /Users/yourusername/Desktop/mac-cleanup-script/clean_mac.sh >> /Users/yourusername/Desktop/mac-cleanup-script/clean_log.txt 2>&1
 ```
-📝 Example:
-```bash 
-0 8 * * * /Users/yourusername/mac-cleanup-bash/clean_mac.sh >> /Users/yourusername/mac-cleanup-bash/clean_log.txt 2>&1
-```
-4. Save and exit:
+   
+3. Save and exit:
 
-Using terminal shell Bash
+If your terminal uses nano (default in Bash):
  - `Ctrl + O` to save
  - `Enter` to confirm
  - `Ctrl + X` to exit
    
-Using the default terminal shell Zsh
+If you're using Vim (often default in Zsh):
+  - Press `ESQ`
   - Press `Shift` + `:`
   - Write `wq` to exit
+    
+
+4. If it worked, you should see this message:
+   `crontab: installing new crontab`
 
 </details>
 
-## Step 4: How to Make Sure It's Working
-
-<details>
-<summary> Details (Click to expand) </summary>
-<br>
+## Step 5: How to Check If It's Working
+<details> <summary>Click here for instructions</summary> <br>
   
-  - Check the clean_log.txt file
-  - After the script runs, it writes a summary to this log file.
+  - Open the `clean_log.txt` file in your script folder
+  - If the script has run, it will write a summary here
 
 </details>
 
-## Extra: Run the script Manually
-
-<details>
-<summary> Details (Click to expand) </summary>
-<br>
+## Run the Script Manually (Optional)
+<details> <summary>Click here for instructions</summary> <br>
   
 1. Open the Terminal
-2. Run the line
-```bash
+2. Acess the `mac-cleanup-script` folder
+   ```bash
+   cd ~/Desktop/mac-cleanup-script
+   ```
+4. Run the line
+  ```bash
   ./clean_mac.sh
-```
-3. Then check your `clean_log.txt.` file
+  ```
+3. Then check your `clean_log.txt.` file to confirm it worked
 
 </details>
 
 
 ___
 
-📌 Use With Caution
+⚠️ Use With Caution
 
 These scripts delete files. No sudo is required, and they’re designed to remove only safe, temporary data, but always make sure you understand what’s being deleted.
 
@@ -131,9 +135,8 @@ These scripts delete files. No sudo is required, and they’re designed to remov
 I built this because I was constantly running out of space while developing iOS apps. Instead of cleaning everything manually, I learned a bit of Bash and wrote this script to automate the job. I hope it helps you too!
 
 📬 Contact & support 
-
-Send me an email at `meunomeecris@gmail.com`.
-
+Have a question or need help?
+Send me an email: `meunomeecris@gmail.com`
 
 <p><a href="https://www.buymeacoffee.com/meunomeecris"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="meunomeecris" /></a></p>
 
