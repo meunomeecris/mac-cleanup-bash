@@ -37,7 +37,6 @@ To allow the `Terminal` to access protected folders:
 
 1. Go to `` > `System Settings ` > `Privacy & Security` > `Full Disk Access`
 2. Click the `+` button and add `Terminal` (or iTerm, if you're using it)
-3. `Restart` your Terminal
 
 </details>
 
