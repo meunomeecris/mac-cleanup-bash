@@ -27,7 +27,7 @@ These scripts were created for anyone who uses heavy apps (like Xcode or Adobe S
 # 🚀 How to Get Started
 Follow these steps to make the script run every day at 8 AM and keep your Mac clean and light.
 
-`These instructions were made for people who are not familiar with Bash or scripting.
+`These instructions were made for people who are not familiar with Bash or scripting.`
 
 ## Step 1: Allow Full Disk Access
 
