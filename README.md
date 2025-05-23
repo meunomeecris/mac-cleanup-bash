@@ -46,7 +46,6 @@ To allow the `Terminal` to access protected folders:
   
 Download the script.
   - [Download the folder](https://drive.google.com/drive/folders/1jfAIF0ZACpmObdtEb8p_frgR9k4AFeN_?usp=sharing) `mac-cleanup-script`
-  - Unwrap the folder
   - Move the folder `mac-cleanup-script` to `Desktop`
     
 </details>
@@ -57,13 +56,13 @@ Download the script.
 1. Open the Terminal:
    - Press `⌘ + Space` and type `Terminal`
 2. Access your folder using:
-   ```bash
-   cd ~/Desktop/mac-cleanup-script
-   ```
+```bash
+cd ~/Desktop/mac-cleanup-script
+```
 3. Make the script executable:
-  ```bash
-  chmod +x clean_mac.sh
-  ```
+```bash
+chmod +x clean_mac.sh
+```
 
 </details>
 
@@ -75,6 +74,8 @@ Download the script.
 whoami
 ```
 2. Replace `yourusername` with the username you found in the previous step:
+
+- Tip: Edit and save the line with your real username before continuing to the next step.
 ```bash
 0 10 * * * /Users/yourusername/Desktop/mac-cleanup-script/clean_mac.sh
 ```
@@ -88,18 +89,18 @@ crontab -e
 ```
 
 5. To change the time:
+
 This schedules the script to run every day at `10 AM` and saves the output to a log file.
 
--To change the time, replace the `10` with the desired hour in the cron expression.
+To change the time, replace the `10` with the desired hour in the cron expression.
 
-Example:
-To run at `3 PM`, replace `10` with `15`.
+Example: To run at `3 PM`, replace `10` with `15`.
 
    
-3. Save and exit:
+6. Save and exit:
 As default you are using your terminal in Zhs:
-  - Press `esc`
-  - Write `:wq` to exit
+- Press `esc`
+- Write `:wq` to exit
 
 If your terminal uses Bash:
  - `Ctrl + O` to save
@@ -108,16 +109,16 @@ If your terminal uses Bash:
    
 
 4. If it worked, you should see this message:
-   `crontab: installing new crontab`
+`crontab: installing new crontab`
 
 </details>
 
 ## Step 5: How to Check If It's Working
 <details> <summary>Click here for instructions</summary> <br>
   
-  - Open the `clean_log.txt` file in your `mac-cleanup-script` folder
-  - If the script has run, it will write a summary here
-  - If is empty, try to run the script manually (next step)
+- Open the `clean_log.txt` file in your `mac-cleanup-script` folder
+- If the script has run, it will write a summary here
+- If is empty, try to run the script manually (next step)
 
 </details>
 
@@ -126,13 +127,13 @@ If your terminal uses Bash:
   
 1. Open the Terminal
 2. Acess the `mac-cleanup-script` folder
-   ```bash
-   cd ~/Desktop/mac-cleanup-script
-   ```
+```bash
+cd ~/Desktop/mac-cleanup-script
+```
 4. Run the line
-  ```bash
-  ./clean_mac.sh
-  ```
+```bash
+./clean_mac.sh
+```
 3. Then check your `clean_log.txt.` file to confirm it worked
 
 </details>
