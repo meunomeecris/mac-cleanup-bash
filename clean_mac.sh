@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USER_HOME=$(eval echo ~$USER)
-LOG_FILE="$USER_HOME/Downloads/mac-cleanup-script/clean_log.txt"
+LOG_FILE="$USER_HOME/Desktop/mac-cleanup-script/clean_log.txt"
 
 echo " Starting mac cleanup script..."
 echo

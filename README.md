@@ -4,7 +4,6 @@ Simple Bash scripts to help macOS users free up disk space automatically.
 
 These scripts were created for anyone who often runs out of space.
 
-
 ## 🧹 What It Does
 
 - Clears safe to remove folders that contain temporary files:
