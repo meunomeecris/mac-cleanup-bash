@@ -46,7 +46,7 @@ To allow the `Terminal` to access protected folders:
 <details> <summary>Click here for instructions</summary> <br>
   
 Download the script.
-  - [Download the folder -> `mac-cleanup-script`](https://drive.google.com/drive/folders/1jfAIF0ZACpmObdtEb8p_frgR9k4AFeN_?usp=sharing)
+  - [Download the folder](https://drive.google.com/drive/folders/1jfAIF0ZACpmObdtEb8p_frgR9k4AFeN_?usp=sharing) `mac-cleanup-script`
   - Unwrap the folder
   - Move the folder `mac-cleanup-script` to `Desktop`
     
